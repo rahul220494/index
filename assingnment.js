@@ -250,23 +250,13 @@
    
    
 16  // WAF to count the number of words in the string?.
-   function countString(str)
-   {
-      let count=0;
-      if(str)
-      {
-          count++;
-          while(str)
-          {
-              str=str.slice(0,3)+str.slice(4);
-              str=str.substring(1);
-              count++;
-
-          }
-      }
-      return count
-   }
-   console.log(countString('rahul'));
+   function WordCount(str) {
+     return str.split(' ')
+            .filter(function(n) { return n != '' })
+            .length;
+}
+   
+   console.log(WordCount('     '));
    
    
    
